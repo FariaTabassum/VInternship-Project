@@ -1,0 +1,1413 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='fact_table (ecomdb_star_schema.fact_table)+ (ecomdb)' inline='true' name='federated.030ynya011gwkc10pddde178j462' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='postgres.1l77auq10vjay91gbnvwj0hklw2q'>
+            <connection authentication='username-password' class='postgres' dbname='ecomdb' one-time-sql='' port='5432' server='127.0.0.1' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='coustomer_dim' table='[ecomdb_star_schema].[coustomer_dim]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='fact_table' table='[ecomdb_star_schema].[fact_table]' type='table' />
+          <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='coustomer_dim' table='[ecomdb_star_schema].[coustomer_dim]' type='table' />
+          <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='item_dim' table='[ecomdb_star_schema].[item_dim]' type='table' />
+          <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='store_dim' table='[ecomdb_star_schema].[store_dim]' type='table' />
+          <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='time_dim' table='[ecomdb_star_schema].[time_dim]' type='table' />
+          <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='trans_dim' table='[ecomdb_star_schema].[trans_dim]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[bank_name]' value='[trans_dim].[bank_name]' />
+          <map key='[contact_no]' value='[coustomer_dim].[contact_no]' />
+          <map key='[coustomer_key (coustomer_dim)]' value='[coustomer_dim].[coustomer_key]' />
+          <map key='[coustomer_key]' value='[fact_table].[coustomer_key]' />
+          <map key='[date]' value='[time_dim].[date]' />
+          <map key='[day]' value='[time_dim].[day]' />
+          <map key='[description]' value='[item_dim].[description]' />
+          <map key='[district]' value='[store_dim].[district]' />
+          <map key='[division]' value='[store_dim].[division]' />
+          <map key='[hour]' value='[time_dim].[hour]' />
+          <map key='[item_key (item_dim)]' value='[item_dim].[item_key]' />
+          <map key='[item_key]' value='[fact_table].[item_key]' />
+          <map key='[item_name]' value='[item_dim].[item_name]' />
+          <map key='[man_country]' value='[item_dim].[man_country]' />
+          <map key='[month]' value='[time_dim].[month]' />
+          <map key='[name]' value='[coustomer_dim].[name]' />
+          <map key='[nid]' value='[coustomer_dim].[nid]' />
+          <map key='[payment_key (trans_dim)]' value='[trans_dim].[payment_key]' />
+          <map key='[payment_key]' value='[fact_table].[payment_key]' />
+          <map key='[quantity]' value='[fact_table].[quantity]' />
+          <map key='[quarter]' value='[time_dim].[quarter]' />
+          <map key='[store_key (store_dim)]' value='[store_dim].[store_key]' />
+          <map key='[store_key]' value='[fact_table].[store_key]' />
+          <map key='[supplier]' value='[item_dim].[supplier]' />
+          <map key='[time_key (time_dim)]' value='[time_dim].[time_key]' />
+          <map key='[time_key]' value='[fact_table].[time_key]' />
+          <map key='[total_price]' value='[fact_table].[total_price]' />
+          <map key='[trans_type]' value='[trans_dim].[trans_type]' />
+          <map key='[unit (item_dim)]' value='[item_dim].[unit]' />
+          <map key='[unit]' value='[fact_table].[unit]' />
+          <map key='[unit_price (item_dim)]' value='[item_dim].[unit_price]' />
+          <map key='[unit_price]' value='[fact_table].[unit_price]' />
+          <map key='[upazila]' value='[store_dim].[upazila]' />
+          <map key='[week]' value='[time_dim].[week]' />
+          <map key='[year]' value='[time_dim].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>payment_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payment_key]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>payment_key</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coustomer_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[coustomer_key]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>coustomer_key</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_key]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>time_key</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>item_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[item_key]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>item_key</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>store_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[store_key]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>store_key</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quantity</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[quantity]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>quantity</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>unit</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit_price</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[unit_price]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>unit_price</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_price</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[total_price]</local-name>
+            <parent-name>[fact_table]</parent-name>
+            <remote-alias>total_price</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coustomer_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[coustomer_key (coustomer_dim)]</local-name>
+            <parent-name>[coustomer_dim]</parent-name>
+            <remote-alias>coustomer_key</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[coustomer_dim]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_no</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[contact_no]</local-name>
+            <parent-name>[coustomer_dim]</parent-name>
+            <remote-alias>contact_no</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nid</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[nid]</local-name>
+            <parent-name>[coustomer_dim]</parent-name>
+            <remote-alias>nid</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>item_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[item_key (item_dim)]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>item_key</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>item_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[item_name]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>item_name</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit_price</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[unit_price (item_dim)]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>unit_price</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>man_country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[man_country]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>man_country</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>supplier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[supplier]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>supplier</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[unit (item_dim)]</local-name>
+            <parent-name>[item_dim]</parent-name>
+            <remote-alias>unit</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>store_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[store_key (store_dim)]</local-name>
+            <parent-name>[store_dim]</parent-name>
+            <remote-alias>store_key</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>division</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[division]</local-name>
+            <parent-name>[store_dim]</parent-name>
+            <remote-alias>division</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>district</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[district]</local-name>
+            <parent-name>[store_dim]</parent-name>
+            <remote-alias>district</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>upazila</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[upazila]</local-name>
+            <parent-name>[store_dim]</parent-name>
+            <remote-alias>upazila</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[time_key (time_dim)]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>time_key</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[week]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>week</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[quarter]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[time_dim]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_key</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payment_key (trans_dim)]</local-name>
+            <parent-name>[trans_dim]</parent-name>
+            <remote-alias>payment_key</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trans_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[trans_type]</local-name>
+            <parent-name>[trans_dim]</parent-name>
+            <remote-alias>trans_type</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bank_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[bank_name]</local-name>
+            <parent-name>[trans_dim]</parent-name>
+            <remote-alias>bank_name</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>false</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='coustomer_dim' datatype='table' name='[__tableau_internal_object_id__].[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fact_table' datatype='table' name='[__tableau_internal_object_id__].[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='item_dim' datatype='table' name='[__tableau_internal_object_id__].[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='store_dim' datatype='table' name='[__tableau_internal_object_id__].[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='time_dim' datatype='table' name='[__tableau_internal_object_id__].[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='trans_dim' datatype='table' name='[__tableau_internal_object_id__].[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]' role='measure' type='quantitative' />
+      <column caption='Bank Name' datatype='string' name='[bank_name]' role='dimension' type='nominal' />
+      <column caption='Contact No' datatype='real' name='[contact_no]' role='measure' type='quantitative' />
+      <column caption='Coustomer Key (Coustomer Dim)' datatype='string' name='[coustomer_key (coustomer_dim)]' role='dimension' type='nominal' />
+      <column caption='Coustomer Key' datatype='string' name='[coustomer_key]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Day' datatype='integer' name='[day]' role='dimension' type='quantitative' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='District' datatype='string' name='[district]' role='dimension' type='nominal' />
+      <column caption='Division' datatype='string' name='[division]' role='dimension' type='nominal' />
+      <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+      <column caption='Item Key (Item Dim)' datatype='string' name='[item_key (item_dim)]' role='dimension' type='nominal' />
+      <column caption='Item Key' datatype='string' name='[item_key]' role='dimension' type='nominal' />
+      <column caption='Item Name' datatype='string' name='[item_name]' role='dimension' type='nominal' />
+      <column caption='Man Country' datatype='string' name='[man_country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Nid' datatype='real' name='[nid]' role='measure' type='quantitative' />
+      <column caption='Payment Key (Trans Dim)' datatype='string' name='[payment_key (trans_dim)]' role='dimension' type='nominal' />
+      <column caption='Payment Key' datatype='string' name='[payment_key]' role='dimension' type='nominal' />
+      <column caption='Quantity' datatype='integer' name='[quantity]' role='measure' type='quantitative' />
+      <column caption='Quarter' datatype='string' name='[quarter]' role='dimension' type='nominal' />
+      <column caption='Store Key (Store Dim)' datatype='string' name='[store_key (store_dim)]' role='dimension' type='nominal' />
+      <column caption='Store Key' datatype='string' name='[store_key]' role='dimension' type='nominal' />
+      <column caption='Supplier' datatype='string' name='[supplier]' role='dimension' type='nominal' />
+      <column caption='Time Key (Time Dim)' datatype='string' name='[time_key (time_dim)]' role='dimension' type='nominal' />
+      <column caption='Time Key' datatype='string' name='[time_key]' role='dimension' type='nominal' />
+      <column caption='Total Price' datatype='real' name='[total_price]' role='measure' type='quantitative' />
+      <column caption='Trans Type' datatype='string' name='[trans_type]' role='dimension' type='nominal' />
+      <column caption='Unit (Item Dim)' datatype='string' name='[unit (item_dim)]' role='dimension' type='nominal' />
+      <column caption='Unit' datatype='string' name='[unit]' role='dimension' type='nominal' />
+      <column caption='Unit Price (Item Dim)' datatype='real' name='[unit_price (item_dim)]' role='measure' type='quantitative' />
+      <column caption='Unit Price' datatype='real' name='[unit_price]' role='measure' type='quantitative' />
+      <column caption='Upazila' datatype='string' name='[upazila]' role='dimension' type='nominal' />
+      <column caption='Week' datatype='string' name='[week]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/ASUS/Documents/My Tableau Repository/Datasources/fact_table (ecomdb_star_schema.fact_table)+ (ecomdb).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/04/2022 04:21:54 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6' table='[Extract].[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' table='[Extract].[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]' type='table' />
+            <relation name='coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6' table='[Extract].[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]' type='table' />
+            <relation name='item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2' table='[Extract].[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]' type='table' />
+            <relation name='store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989' table='[Extract].[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]' type='table' />
+            <relation name='time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF' table='[Extract].[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]' type='table' />
+            <relation name='trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3' table='[Extract].[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[bank_name]' value='[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3].[bank_name]' />
+            <map key='[contact_no]' value='[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6].[contact_no]' />
+            <map key='[coustomer_key (coustomer_dim)]' value='[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6].[coustomer_key]' />
+            <map key='[coustomer_key]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[coustomer_key]' />
+            <map key='[date]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[date]' />
+            <map key='[day]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[day]' />
+            <map key='[description]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[description]' />
+            <map key='[district]' value='[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989].[district]' />
+            <map key='[division]' value='[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989].[division]' />
+            <map key='[hour]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[hour]' />
+            <map key='[item_key (item_dim)]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[item_key]' />
+            <map key='[item_key]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[item_key]' />
+            <map key='[item_name]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[item_name]' />
+            <map key='[man_country]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[man_country]' />
+            <map key='[month]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[month]' />
+            <map key='[name]' value='[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6].[name]' />
+            <map key='[nid]' value='[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6].[nid]' />
+            <map key='[payment_key (trans_dim)]' value='[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3].[payment_key]' />
+            <map key='[payment_key]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[payment_key]' />
+            <map key='[quantity]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[quantity]' />
+            <map key='[quarter]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[quarter]' />
+            <map key='[store_key (store_dim)]' value='[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989].[store_key]' />
+            <map key='[store_key]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[store_key]' />
+            <map key='[supplier]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[supplier]' />
+            <map key='[time_key (time_dim)]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[time_key]' />
+            <map key='[time_key]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[time_key]' />
+            <map key='[total_price]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[total_price]' />
+            <map key='[trans_type]' value='[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3].[trans_type]' />
+            <map key='[unit (item_dim)]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[unit]' />
+            <map key='[unit]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[unit]' />
+            <map key='[unit_price (item_dim)]' value='[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2].[unit_price]' />
+            <map key='[unit_price]' value='[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863].[unit_price]' />
+            <map key='[upazila]' value='[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989].[upazila]' />
+            <map key='[week]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[week]' />
+            <map key='[year]' value='[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF].[year]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='fact_table (ecomdb_star_schema.fact_table)+ (ecomdb)' increment-value='%null%' refresh-type='create' rows-inserted='1110219' timestamp-start='2022-03-04 16:20:59.428' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>payment_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payment_key]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>payment_key</remote-alias>
+              <ordinal>0</ordinal>
+              <family>fact_table</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coustomer_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[coustomer_key]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>coustomer_key</remote-alias>
+              <ordinal>1</ordinal>
+              <family>fact_table</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>55195</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[time_key]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>time_key</remote-alias>
+              <ordinal>2</ordinal>
+              <family>fact_table</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>293310</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>item_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[item_key]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>item_key</remote-alias>
+              <ordinal>3</ordinal>
+              <family>fact_table</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>264</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>store_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[store_key]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>store_key</remote-alias>
+              <ordinal>4</ordinal>
+              <family>fact_table</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>815</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[quantity]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>quantity</remote-alias>
+              <ordinal>5</ordinal>
+              <family>fact_table</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unit</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[unit]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>unit</remote-alias>
+              <ordinal>6</ordinal>
+              <family>fact_table</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unit_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[unit_price]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>unit_price</remote-alias>
+              <ordinal>7</ordinal>
+              <family>fact_table</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_price]</local-name>
+              <parent-name>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</parent-name>
+              <remote-alias>total_price</remote-alias>
+              <ordinal>8</ordinal>
+              <family>fact_table</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>580</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>coustomer_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[coustomer_key (coustomer_dim)]</local-name>
+              <parent-name>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</parent-name>
+              <remote-alias>coustomer_key</remote-alias>
+              <ordinal>9</ordinal>
+              <family>coustomer_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9191</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>10</ordinal>
+              <family>coustomer_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2221</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contact_no</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[contact_no]</local-name>
+              <parent-name>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</parent-name>
+              <remote-alias>contact_no</remote-alias>
+              <ordinal>11</ordinal>
+              <family>coustomer_dim</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9191</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nid</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[nid]</local-name>
+              <parent-name>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</parent-name>
+              <remote-alias>nid</remote-alias>
+              <ordinal>12</ordinal>
+              <family>coustomer_dim</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9191</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>item_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[item_key (item_dim)]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>item_key</remote-alias>
+              <ordinal>13</ordinal>
+              <family>item_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>264</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>item_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[item_name]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>item_name</remote-alias>
+              <ordinal>14</ordinal>
+              <family>item_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>259</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>description</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[description]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>description</remote-alias>
+              <ordinal>15</ordinal>
+              <family>item_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unit_price</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[unit_price (item_dim)]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>unit_price</remote-alias>
+              <ordinal>16</ordinal>
+              <family>item_dim</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>man_country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[man_country]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>man_country</remote-alias>
+              <ordinal>17</ordinal>
+              <family>item_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>supplier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[supplier]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>supplier</remote-alias>
+              <ordinal>18</ordinal>
+              <family>item_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>unit</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[unit (item_dim)]</local-name>
+              <parent-name>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</parent-name>
+              <remote-alias>unit</remote-alias>
+              <ordinal>19</ordinal>
+              <family>item_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>store_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[store_key (store_dim)]</local-name>
+              <parent-name>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</parent-name>
+              <remote-alias>store_key</remote-alias>
+              <ordinal>20</ordinal>
+              <family>store_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>726</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>division</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[division]</local-name>
+              <parent-name>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</parent-name>
+              <remote-alias>division</remote-alias>
+              <ordinal>21</ordinal>
+              <family>store_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>district</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[district]</local-name>
+              <parent-name>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</parent-name>
+              <remote-alias>district</remote-alias>
+              <ordinal>22</ordinal>
+              <family>store_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>upazila</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[upazila]</local-name>
+              <parent-name>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</parent-name>
+              <remote-alias>upazila</remote-alias>
+              <ordinal>23</ordinal>
+              <family>store_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>540</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[time_key (time_dim)]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>time_key</remote-alias>
+              <ordinal>24</ordinal>
+              <family>time_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>99999</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>25</ordinal>
+              <family>time_dim</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>99999</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>26</ordinal>
+              <family>time_dim</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[day]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>day</remote-alias>
+              <ordinal>27</ordinal>
+              <family>time_dim</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>week</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[week]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>week</remote-alias>
+              <ordinal>28</ordinal>
+              <family>time_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>29</ordinal>
+              <family>time_dim</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>quarter</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[quarter]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>quarter</remote-alias>
+              <ordinal>30</ordinal>
+              <family>time_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>31</ordinal>
+              <family>time_dim</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payment_key</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payment_key (trans_dim)]</local-name>
+              <parent-name>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</parent-name>
+              <remote-alias>payment_key</remote-alias>
+              <ordinal>32</ordinal>
+              <family>trans_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trans_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[trans_type]</local-name>
+              <parent-name>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</parent-name>
+              <remote-alias>trans_type</remote-alias>
+              <ordinal>33</ordinal>
+              <family>trans_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>bank_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[bank_name]</local-name>
+              <parent-name>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</parent-name>
+              <remote-alias>bank_name</remote-alias>
+              <ordinal>34</ordinal>
+              <family>trans_dim</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Bangladesh&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='coustomer_dim' id='coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6'>
+            <properties context=''>
+              <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='coustomer_dim' table='[ecomdb_star_schema].[coustomer_dim]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6' table='[Extract].[coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6]' type='table' />
+            </properties>
+          </object>
+          <object caption='fact_table' id='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863'>
+            <properties context=''>
+              <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='fact_table' table='[ecomdb_star_schema].[fact_table]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' table='[Extract].[fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863]' type='table' />
+            </properties>
+          </object>
+          <object caption='item_dim' id='item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2'>
+            <properties context=''>
+              <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='item_dim' table='[ecomdb_star_schema].[item_dim]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2' table='[Extract].[item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2]' type='table' />
+            </properties>
+          </object>
+          <object caption='store_dim' id='store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989'>
+            <properties context=''>
+              <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='store_dim' table='[ecomdb_star_schema].[store_dim]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989' table='[Extract].[store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989]' type='table' />
+            </properties>
+          </object>
+          <object caption='time_dim' id='time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF'>
+            <properties context=''>
+              <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='time_dim' table='[ecomdb_star_schema].[time_dim]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF' table='[Extract].[time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF]' type='table' />
+            </properties>
+          </object>
+          <object caption='trans_dim' id='trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3'>
+            <properties context=''>
+              <relation connection='postgres.1l77auq10vjay91gbnvwj0hklw2q' name='trans_dim' table='[ecomdb_star_schema].[trans_dim]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3' table='[Extract].[trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[coustomer_key]' />
+              <expression op='[coustomer_key (coustomer_dim)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='coustomer_dim (ecomdb_star_schema.coustomer_dim)_221A5A91BB4A4299BD5F128C1187BAC6' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[item_key]' />
+              <expression op='[item_key (item_dim)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='item_dim (ecomdb_star_schema.item_dim)_CAB24FB4C83647748423810DA6EA20F2' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[store_key]' />
+              <expression op='[store_key (store_dim)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='store_dim (ecomdb_star_schema.store_dim)_9FFD5C59861447CEADD4E5F64551B989' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[time_key]' />
+              <expression op='[time_key (time_dim)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='time_dim (ecomdb_star_schema.time_dim)_616ADE59241143DEA75CDD4F3CB597BF' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[payment_key]' />
+              <expression op='[payment_key (trans_dim)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-guaranteed-value='true' guaranteed-value='true' object-id='fact_table (ecomdb_star_schema.fact_table)_93CB85FAA158490CB86D9305378BA863' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='trans_dim (ecomdb_star_schema.trans_dim)_3DD10654D61C47ECAA76EFCE7B84DDC3' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{85853BD5-C996-4958-A5B6-A1A59E258093}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FE5B5338-4099-4B16-9795-E85A43E59222}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
